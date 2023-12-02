@@ -1,0 +1,7 @@
+---
+name: gnmi_get
+pack: st2_gnmi
+description: "gNMI get request"
+action_ref: "st2_gnmi.get"
+formats:
+  - "gnmi_get {{host}}:{{port}} {{username}} {{password}} {{path}}"e
