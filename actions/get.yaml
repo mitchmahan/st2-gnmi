@@ -1,0 +1,38 @@
+---
+name: get
+pack: st2_gnmi
+runner_type: "python-script"
+description: Run a gNMI get operation on a device.
+enabled: true
+entry_point: get.py
+parameters:
+    host:
+        type: string
+        description: The IP address or FQDN of a network device with grpc gNMI enabled.
+        required: true
+        position: 0
+    port:
+        type: integer
+        description: The TCP port for grpc.
+        required: true
+        position: 1
+    username:
+        type: string
+        description: Username for the grpc connection.
+        required: true
+        position: 2
+    password:
+        type: string
+        description: Password for the grpc connection.
+        required: true
+        position: 3
+    path:
+        type: array
+        description: A list of gNMI paths to get data from.
+        required: true
+        position: 4
+    insecure:
+        type: boolean
+        description: Allow insecure TLS connection.
+        required: false
+        position: 5
