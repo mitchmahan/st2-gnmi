@@ -23,6 +23,7 @@ parameters:
         position: 2
     password:
         type: string
+        secret: true
         description: Password for the grpc connection.
         required: true
         position: 3
